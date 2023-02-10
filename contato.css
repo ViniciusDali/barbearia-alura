@@ -1,0 +1,46 @@
+main {
+  width: 940px;
+  margin: 0 auto;
+}
+
+form {
+  margin: 40px 0;
+}
+
+form label,
+form legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padrao {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  background: orange;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all; /*transition permite que o transform seja feito de forma gradual*/
+  cursor: pointer; /*muda a seta do mause para o simbolo de mão */
+}
+
+.enviar:hover {
+  background: darkorange;
+  transform: /*rotate(70deg)*/ scale(
+    1.2
+  ); /* transform permite realizar mudanças em um elemento, rotate faz o elemento girar e scale faz o elemento aumentar de tamanho */
+}

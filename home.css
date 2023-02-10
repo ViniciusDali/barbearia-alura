@@ -1,35 +1,3 @@
-header {
-  background: #bbbbbb;
-  padding: 20px 0px;
-}
-
-.caixa {
- display: flex;
- justify-content:space-between;
- align-items: center;
-  width: 940px;
-  margin: 0px auto;
-}
-
-nav li {
-  display: inline;
-  margin: 0 0 0 15px;
-}
-
-.link-nav {
-  text-transform: uppercase; /* transformação tudo texto maiúsculo */
-  color: #000000; /* cor do texto */
-  font-weight: bold; /*peso da fonte do texo*/
-  font-size: 22px; /* tamanho da fonte */
-  text-decoration: none; /* decoração padrão, nesse caso foi removida */
-}
-
-nav a:hover {
-  /* hover vai ditar o comportamento quando o mause estiver por cima dos itens selecionados */
-  color: #c78c19;
-  text-decoration: underline; /* text-decoration muda a decoração do texto, no caso do Underline é para sublinhar o texto */
-}
-
 #banner {
   width: 100%;
 }
@@ -85,28 +53,3 @@ em strong {
   width: 50%;
 }
 
-footer {
-  text-align: center;
-  background: url("./image/bg.jpg");
-  padding: 40px 0;
-}
-
-.copyright {
-  color: #ffffff;
-  font-size: 13px;
-  margin-top: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .caixa {
-    
-    width: 80%;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-} /*768 é o tamanho para tablet, tem que fazer a configuração de item por item. Fazer o mesmo bloco para smartphone*/
