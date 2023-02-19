@@ -51,3 +51,11 @@ footer {
     align-items: center;
   }
 } /*768 é o tamanho para tablet, tem que fazer a configuração de item por item. Fazer o mesmo bloco para smartphone*/
+
+@media screen and (max-width: 440px) {
+  nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} /*440 é o tamanho para celular, tem que fazer a configuração de item por item. Fazer o mesmo bloco para smartphone*/

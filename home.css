@@ -1,55 +1,163 @@
-#banner {
-  width: 100%;
+body {
+  font-family: "Open Sans", sans-serif;
 }
+
+.banner {
+  width: 100%;
+  margin-bottom: 2.5%;
+}
+
+/*main > p {   O > permite selecionar os elementos que são filhos direto do elemento pai 
+  background: red;
+} 
+
+img + p { O + permite selecionar o primeiro irmão do elemento acora, nesse exemplo, os  primeiros P após uma IMG serão afetados
+background: yellow;
+}
+
+img ~ p { O ~ permite selecionar todos os irmãos do elemento acora, nesse exemplo, todos os P que são irmãos após uma IMG serão afetados
+background: yellow;
+}
+
+.principal p:not(#missao) { O :not permite excluir o elemento selecionado entre os (), fazendo com que todos os elementos irmãos, menos o selecionado, sejam afetados pelo novo comando
+  background: orange;
+} */
+
+.titulo-principal {
+  text-align: center;
+  font-size: 2em;
+  margin: 0 0 1em;
+  clear: left;
+ /* color: rgba(0, 0, 0, 0.3); Usando cores com rgba ("a"" que permite a opacidade nas cores
+ text-shadow: 2px 2px #ff0000; Sombras em texto */
+}
+
+/*.titulo-principal::first-letter {  Seleciona a primeira letra do elemento 
+font-weight: bold;
+}*/
+
+/*p::first-line {  Seleciona a primeira linha do elemento 
+font-style: ;
+}*/
+
+/* :before permite adicionar conteúdo antes do elemento
+    :after permite adicionar conteúdo após o elemento
+.titulo-principal:before {
+content: "O que você gostaria antes dos títulos";
+}
+.titulo-principal:after {
+  content: "O que você gostaria depois dos títulos";
+} */
 
 .principal {
-  background: #cccccc;
-  padding: 30px;
+  padding: 3em 0;
+  background: #fefefe;
+  width: 940px;
+  margin: 0 auto;
 }
 
-.titulo-centralizado {
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  padding-bottom: 15px;
+.principal p {
+  margin: 0 0 1em;
 }
 
-p {
-  text-align: center;
-  font-size: 18px;
-  padding: 15px 0;
-}
-
-#missao {
-  font-size: 18px;
-  padding: 10px 0;
+.principal strong {
   font-weight: bold;
 }
 
-em strong {
-  color: red;
-}
-
-.itens {
+.principal em {
   font-style: italic;
 }
 
+.utensilios {
+  width: 120px; /* Podemos usa o comando calc para fazer operações matematicas nos tamanhos dos elementos, exemplo: width:  calc(40%-26px) */
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.mapa {
+  padding: 3em 0;
+  background: linear-gradient(
+    #fefefe,
+    #888888
+  ); /* background:linear-gradient faz a transição de duas ou mais cores, efeito degradê, usando o comando deg ele muda a inclinação do degradê, exemplo: background:linear-gradient(45deg, orange, blue);. também podemos definir a distribuição do degradê, exemplo: background:linear-gradient(orange 75%, blue); 
+  background:radial-gradient(orange, blue); faz o degradê em círculos*/
+}
+
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.mapa-conteudo {
+  width: 940px;
+  margin: 0 auto;
+}
+
 .beneficios {
-  background: #ffffff;
-  padding: 22px;
+  padding: 3em 0;
+  background: #888888;
+ /* box-shadow: inset 0 0 30px #ff0000 ; Sombra interna de um elemento */
+}
+
+.conteudo-beneficios {
+display: flex;
+justify-content: space-around;
+margin-top: 3%;
+margin-left: 10%;
+margin-right: 10%;
 }
 
 .lista-beneficios {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%;
-  margin-right: 15%;
-  font-size: 18px;
+  width: 40%;
+  
+}
+
+.itens {
+  line-height: 1.5;
+}
+
+.itens:before {
+  content: "★";
+}
+
+.itens:first-child {
+  /* :first-child faz com que o primeiro elemento se modificado. ;last-child faz com que o ultimo elemento seja modificado. :nth-child () faz com que o número citado entre o () seja modificado */
   font-weight: bold;
-  list-style: disc;
 }
 
-.imagembeneficios {
-  width: 50%;
+.imagem-beneficios {
+  width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 5px #000000;
+  /*box-shadow: 10px 10px 5px 20px #000000, -10px -10px yellow, -20px 20px rgba(255, 0, 0, 0.5);  Esse elemento é de sombra, o primeiro é o eixo X o segundo o eixo Y, o terceiro é a transparencia e o quarto é o quanto mais ela vai se espalhar e o quinto é a cor. Podemos ter varias sombras, basta separar por ",".*/
 }
 
+.imagem-beneficios:hover {
+  opacity: 0.5;
+}
+
+.video {
+  width: 560px;
+  margin: 4em auto;
+}
+
+@media screen and (max-width: 768px) {
+ .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+  width: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+ }
+
+ .conteudo-beneficios {
+  flex-wrap: wrap;
+ }
+
+ .lista-beneficios, .imagem-beneficios {
+  width: 100%;
+ }
+
+ .lista-beneficios {
+  margin-bottom: 10%;
+ }
+}

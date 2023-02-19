@@ -1,3 +1,7 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 main {
   width: 940px;
   margin: 0 auto;
@@ -43,4 +47,38 @@ form legend {
   transform: /*rotate(70deg)*/ scale(
     1.2
   ); /* transform permite realizar mudanças em um elemento, rotate faz o elemento girar e scale faz o elemento aumentar de tamanho */
+}
+
+table {
+  margin: 20px 0 40px;
+}
+
+thead {
+  background: #555555;
+  color: white;
+  font-weight: bolder;
+}
+
+td,
+th {
+  border: 1px solid #000000;
+  padding: 8px 15px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .input-padrao {
+   width: 80%;
+  }
+
+  .enviar {
+    width: 90%;
+    margin-left: 5%;
+   
+  }
 }
